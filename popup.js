@@ -9,7 +9,7 @@ chrome.tabs.getSelected(null, function(tab) {
     else {
       // This is like "main"
       chrome.storage.sync.remove([processedKey, mapKey], function() {
-        var timer = setInterval(readChat, 12 * 1000); // fetch new chat lines every 12 seconds
+        var timer = setInterval(readChat, 3 * 1000); // fetch new chat lines every 3 seconds
         //var cleaner = setInterval(clearStorage, 5 * 60 * 1000); // reset set and map after 5 minutes
       });
       readChat();
@@ -55,9 +55,9 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
         obj[mapKey] = freqMap;
         console.log(freqMap);
         //console.log(set);
-        console.log(total);
-        var keysSorted = Object.keys(freqMap).sort(function(a,b){return freqMap[b]-freqMap[a]})
-        console.log(keysSorted);
+        //console.log(total);
+        displayMaxes(freqMap);
+        //console.log(keysSorted);
         //if(total > 1000) clearStorage();
         chrome.storage.sync.set(obj, function() {});
       });
@@ -65,6 +65,16 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
     
   }
 });
+
+function displayMaxes(freqMap) {
+  var keysSorted = Object.keys(freqMap).sort(function(a,b){return freqMap[b]-freqMap[a]})
+  keysSorted = keysSorted.slice(0, 10); // get top 10
+  $("#main-table").find("tr:gt(0)").remove(); // clear the table besides first row
+  for(var i = 0; i < keysSorted.length; i++) {
+    var message = keysSorted[i];
+    $('#main-table tr:last').after("<tr><td>" + message + "</td><td>" + freqMap[message] + "</td></tr>");
+  }
+}
 
 function readChat() {
     chrome.tabs.executeScript(null, {
