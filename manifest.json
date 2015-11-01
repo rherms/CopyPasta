@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Twitch",
+  "description": "This extension will help you copy pasta.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "activeTab",
+    "tabs",
+    "storage",
+    "contextMenus",
+    "<all_urls>"
+  ]
+}

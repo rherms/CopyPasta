@@ -1,0 +1,218 @@
+
+body {
+	padding: 5px;
+	background-color: #300000;
+	width: 750px;
+	height: 800px;
+}
+
+#contentsTable > td {
+	/*background-color: #999999;*/
+}
+
+div {
+	padding: 0px;
+	margin: 0px;
+}
+
+p {
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+
+#contentsTable td {
+	font-family: "Verdana", serif, normal;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+#head_row {
+	background-color: #700007;
+	border-bottom: solid #300000 5px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 5px;
+	color: #DE9999;
+}
+
+#saveInput {
+	background-color: #DE9999;
+	outline: 0;
+	border: 0;
+}
+
+#createInput {
+	background-color: #DE9999;
+	outline: 0;
+	border: 0;
+}
+
+#contentsTable{
+	background-color: #300000;
+	width: 100%;
+	cursor: default;
+}
+
+#menuBar {
+	background-color: #300000;
+	min-width: 400px;
+	cursor: default;
+	horizontal-align: 
+}
+
+#curDirLabel {
+	border-top: double #DE9999 2px;
+	border-bottom: double #DE9999 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #300000;
+	padding: 0px;
+	cursor: default;
+}
+
+#fsDisplay{
+	background-color: #300000;
+	padding: 0px;
+}
+
+#backButton {
+	margin: 0px;
+	background-color: #300000;
+}
+
+.backButton {
+	width: 32px;
+	height: 32px;
+}
+
+.iconImg {
+	width : 19px;
+	height : 19px;
+}
+
+.curDirToken {
+	font-family: "Verdana", serif, normal;
+	font-size: 14px;
+	cursor: default;
+	padding: 0px;
+}
+
+.oddfile {
+	background-color: #DE9999;
+	color: #300000;
+	cursor: default;
+}
+
+.oddfile.selected {
+	background-color: #44D482;
+}
+
+.oddfile.selected:hover {
+	background-color: #8C1D1D;
+}
+
+.oddfile:hover {
+	background-color: #E3B6B6;
+}
+
+.evenfile {
+	background-color: #700007;
+	color: #DE9999;
+	cursor: default;
+}
+
+.evenfile.selected{
+	background-color: #269945;
+}
+
+.evenfile.selected:hover {
+	background-color: #8C1D1D;
+}
+
+.evenfile:hover {
+	background-color: #8C4248;
+	color: #F2C7C7;
+}
+
+.oddmarker{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #DE9999;
+	color: #300000;
+	cursor: default;
+}
+
+.oddmarker:hover {
+	background-color: #E3B6B6;
+}
+
+.evenmarker{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #700007;
+	color: #DE9999;
+	cursor: default;
+}
+
+.evenmarker:hover {
+	background-color: #8C4248;
+}
+
+.rightFloat {
+	float: right;
+	cursor: default;
+}
+
+.menuBarToken {
+	background-color: #700007;
+	display: inline-block;
+	padding: 5px;
+	margin: 3px;
+	margin-right: 0px;
+	cursor: default;
+	font-family: "Verdana", serif, normal;
+	font-size: 16px;
+	color: #DE9999;
+}
+
+.newLineToken {
+	clear: both;
+	background-color: #700007;
+	display: inline-block;
+	padding: 5px;
+	margin: 3px;
+	margin-right: 0px;
+	cursor: default;
+	font-family: "Verdana", serif, normal;
+	font-size: 16px;
+	color: #DE9999;
+}
+
+.newLineToken:hover{
+	color: white;
+}
+
+.menuBarToken:hover{
+	color: white;
+}
+
+#saveFalldown {
+	background-color: #300000;
+	padding: 5px;
+	cursor: default;
+	color: #DE9999;
+}
+
+#createFalldown{
+	background-color: #300000;
+	padding: 5px;
+	cursor: default;
+	color: #DE9999;
+}
+
